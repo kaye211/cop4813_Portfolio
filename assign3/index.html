@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>John Zank | Developer</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700italic,400,700,800|Josefin+Slab:100,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <script src ="app.js" type="text/javascript"> </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script>
+        function statistics() {
+
+          num = document.getElementById('num').value;
+          numArray = num.split(',');
+          document.getElementById('count').value = total(numArray);
+          document.getElementById('sum').value = sum(numArray);
+          document.getElementById('mean').value = mean(numArray);
+          document.getElementById('median').value = median(numArray);
+          document.getElementById('mode').value = mode(numArrary);
+          document.getElementById('variance').value = variance(numArray);
+          document.getElementById('stdev').value = standardDev(numArray);
+        }
+      </script>
+      <script src="statistics.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" id="logo">
+        <h1 class="fname">John</h1>
+        <h1>Zank</h1>
+        <h2>Developer</h2>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Portfolio</a></li>
+          <li><a href="../assign1/index.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="wrapper">
+      <section>
+          <h1>Assignment 3</h1>
+          <div>
+            <label>Enter Numbers</label><br>
+            <input type="text" id="num"><br>
+            <input type="button" value="Calculate Statistics" onClick="statistics()"><br>
+            <br>
+            <fieldset>
+              <legend>Results</legend>
+              <label>How Many Numbers</label><br>
+              <input type="text" id="count"><br>
+              <label>The Sum</label><br>
+              <input type="text" id="sum"><br>
+              <label>The Mean</label><br>
+              <input type="text" id="mean"><br>
+              <label>The Median</label><br>
+              <input type="text" id="median"><br>
+              <label>The Mode</label><br>
+              <input type="text" id="mode"><br>
+              <label>The Variance</label><br>
+              <input type="text" id="variance"><br>
+              <label>The Standard Diviation</label><br>
+              <input type="text" id="stdev"><br>
+            </fieldset>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th colspan="8">Test Results:</th>
+              </tr>
+            </thead>            
+            <tr>
+              <td>Numbers</td>
+              <td>| Count </td>
+              <td>| Sum </td>
+              <td>| Mean </td>
+              <td>| Median </td>
+              <td>| Mode </td>
+              <td>| Variance </td>
+              <td>| Standard Diviation </td>
+           </tr>
+           <tr>
+             <td>5, 9, 0, 3, 3, 5, 5</td>
+             <td>7</td>
+             <td>30</td>
+             <td>4.29</td>
+             <td>3</td>
+             <td>5</td>
+             <td>7.57</td>
+             <td>2.75</td>
+          </tr>
+           <tr>
+             <td>102, 78.4, 93, 2, 2, 7, 87.4</td>
+             <td>7</td>
+             <td>371</td>
+             <td>53.00</td>
+             <td>2</td>
+             <td>2</td>
+             <td>2183.33</td>
+             <td>46.73</td>
+          </tr>
+           <tr>
+             <td>54.6666, 4, 4, 4, 3.14, 9</td>
+             <td>6</td>
+             <td>78</td>
+             <td>13.00</td>
+             <td>4</td>
+             <td>4</td>
+             <td>408.00</td>
+             <td>20.20</td>
+          </tr>
+        </table><br>
+      </section>
+      <footer>
+        <a href="http://facebook.com/john.k.zank"><img src="../img/facebook-wrap.png" alt="Facebook" class="social-icon"></a>
+        <p>&copy; 2015 John Zank.</p>
+      </footer>
+    </div>
+  </body> 
+</html>

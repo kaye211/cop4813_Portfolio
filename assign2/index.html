@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>John Zank | Developer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700italic,400,700,800|Josefin+Slab:100,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header>
+      <a href="index.html" id="logo">
+        <h1 class="fname">John</h1>
+        <h1>Zank</h1>
+        <h2>Developer</h2>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Portfolio</a></li>
+          <li><a href="assign1/index.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <section>
+            <h1>Assignment 2</h1>
+        <h2>Tell me about you</h2>
+        <!-- Personal Info Begins -->
+        <fieldset>
+          <legend>Personal Information</legend>
+          First Name<br>
+          <input id="fname" type="text" name="firstname"><br>
+          Last Name<br>
+          <input id="lname" type="text" name="lname"><br>
+          Gender<br>
+          <input id="male" type="radio" name="sex" value="male" checked="true">Male<br>
+          <input id="female" type="radio" name="sex" value="female" checked="true">Female<br>
+          Favorite Food<br>
+          <input id="food" type="text" name="favefood"><br>
+          Favorite Genre of Music<br>
+          <input id="music" type="text" name="musicgenre"><br>
+          Favorite Movie<br>
+          <input id="movie" type="text" name"favemovie"><br>
+          Education Level<br>
+          <select id="education">
+            <option value="default"></option>
+            <option value="hs">Highschool</option>
+            <option value="as">Associates</option>
+            <option value="bs">Bachelors</option>
+            <option value="ms">Masters</option>
+            <option value="phd">PHD</option>
+          </select><br>
+          Power Level
+          <div>
+            <label>Over 9000!</label>
+            <input type="checkbox" name="vegeta" value"9000">
+          </div>  
+        </fieldset>
+        <!-- End of Personal Info -->
+        <table>
+        <tr>
+          <td><input type="submit" id="submit" onclick="enter()" value=" Submit"></td>
+          <td><input type="reset" id="reset" onclick="reset()" value="Reset"></td>
+        </tr>
+        </table>
+        <center><a href="../img/Flowchart.png" target="_blank">Flowchart</a></center><br>  
+      </section>
+      <footer>
+        <a href="http://facebook.com/john.k.zank"><img src="../img/facebook-wrap.png" alt="Facebook" class="social-icon"></a>
+        <p>&copy; 2015 John Zank.</p>
+      </footer>
+    </div>
+  </body> 
+</html>
