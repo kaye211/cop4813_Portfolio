@@ -11,16 +11,16 @@
   </head>
   <body>
     <header>
-      <a href="index.html" id="logo">
-        <h1 class="fname">John</h1>
-        <h1>Zank</h1>
-        <h2>Developer</h2>
+      <a href="../index.html" class="logo">
+        <h1 class="fname logo">John</h1>
+        <h1 class="logo">Zank</h1>
+        <h2 class="logo">Developer</h2>
       </a>
       <nav>
         <ul>
-          <li><a href="index.html">Portfolio</a></li>
-          <li><a href="assign1/index.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="../index.html">Portfolio</a></li>
+          <li><a href="../assign1/index.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>

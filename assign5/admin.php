@@ -72,23 +72,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 ?>
 
 <?php include("../inc/header.php"); ?>
-    <div class="wrapper">
-        <div class ="container">
-        <section>
-            <div style="text-align: center;">
-            <h1>Assignment 5</h1>
-            <h2>Add Stock</h2>
-                </div>
-            <form method="post" action="admin.php">
-                <table>
-                    <thead>
-                        <tr>
-                            <th colspan="3">Stocks</th>
-                        </tr>
-                    </thead>
-                    <tr>
-                        <td class="inner_button">
-                            <select name='name'>
+    <div class="container">
+        <div class ="row">
+            <div class="col-md-6">
+                <h3>Add Stock</h3>
+                    <form method="post" action="admin.php">
+                        <div class="form-group">
+                            <select name='name' class="form-control">
                                 <option value="default">Choose your stock</option>
                                 <option value="GOOG">Google</option>
                                 <option value="AAPL">Apple</option>
@@ -97,82 +87,80 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                                 <option value="INTC">Intel Corporation</option>
                                 <option value="FB">Facebook, Inc.</option>
                                 <option value="CSCO">Cisco Systems, Inc.</option>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="inner_button">
-                            <select name="choice">
-                                <option value="default">Buy/Sell/Delete</option>
-                                <option value="buy">Buy</option>
-                                <option value="sell">Sell</option>
-                                <option value="delete">Delete</option>
-                        </td>
-                    <tr>
-                        <td class="inner_button"><input name='quantity' placeholder="Quantity"></td>
-                    </tr>
-                </table>
-                <br><div style="text-align: center;">
-                    <input type="submit" value='Submit' class="s_button">
-                    <input type='Reset' class="s_button">
-                </div>
-            </form>
-
-            <div class="wrapper"><br>
-                <table>
-                    <thead>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select name="choice" class="form-control">
+                                    <option value="default">Buy/Sell/Delete</option>
+                                    <option value="buy">Buy</option>
+                                    <option value="sell">Sell</option>
+                                    <option value="delete">Delete</option>
+                            </select>
+                        </div>
+                        <div class="form-group">                    
+                            <input name='quantity' placeholder="Quantity" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value='Submit' class="btn btn-primary">
+                            <input type='Reset' class="btn btn-danger">
+                        </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th colspan="4">Your Portfolio</th>
+                            </tr>
+                        </thead>
                         <tr>
-                            <th colspan="4">Your Portfolio</th>
+                            <th> Stock Name </th>
+                            <th> Amount Owned </th>
+                            <th> Date Last Modified </th>
+                            <th> Stock Worth </th>
                         </tr>
-                    </thead>
-                    <tr>
-                        <th> Stock Name </th>
-                        <th> Amount Owned </th>
-                        <th> Date Last Modified </th>
-                        <th> Stock Worth </th>
-                    </tr>
-                <?php
-                    $fp = fopen("stock.dat", "r");
-                    $total_worth = 0;
-                    while (!feof($fp))
-                    {
-                        $stock_info = explode(" | ", fgets($fp));
+                    <?php
+                        $fp = fopen("stock.dat", "r");
+                        $total_worth = 0;
+                        while (!feof($fp))
+                        {
+                            $stock_info = explode(" | ", fgets($fp));
+                            echo "<tr>";
+                            echo "<td>";
+                            echo $stock_info[0];
+                            echo "</td>";
+                            echo "<td>";
+                            echo $stock_info[1];
+                            echo "</td>";
+                            echo "<td>";
+                            echo $stock_info[2];
+                            echo "</td>";
+                            echo "<td>";
+                            echo $stock_info[3];
+                            echo "</td>";
+                            echo "</tr>";
+                            $total_worth += $stock_info[3];
+
+                        }
                         echo "<tr>";
                         echo "<td>";
-                        echo $stock_info[0];
+                        echo "Total Stock Worth:";
                         echo "</td>";
                         echo "<td>";
-                        echo $stock_info[1];
                         echo "</td>";
                         echo "<td>";
-                        echo $stock_info[2];
                         echo "</td>";
                         echo "<td>";
-                        echo $stock_info[3];
+                        echo $total_worth;
                         echo "</td>";
-                        echo "</tr>";
-                        $total_worth += $stock_info[3];
 
-                    }
-                    echo "<tr>";
-                    echo "<td>";
-                    echo "Total Stock Worth:";
-                    echo "</td>";
-                    echo "<td>";
-                    echo "</td>";
-                    echo "<td>";
-                    echo "</td>";
-                    echo "<td>";
-                    echo $total_worth;
-                    echo "</td>";
-
-                    fclose($fp);
-                ?>
-                </table>
-                <div style="text-align: center;">
-                <br><br><a href='logout.php'>Log out</a>
+                        fclose($fp);
+                    ?>
+                    </table>
+                    <div style="text-align: center;">
+                        <br><br><a href='logout.php'>Log out</a>
                     </div>
             </div>
-        </section>
         </div>
     </div>
 <?php include("../inc/footer.php"); ?>

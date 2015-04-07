@@ -26,8 +26,9 @@ body {
   padding: 0 5%;
 }
 
-a {
+a, a:hover {
    text-decoration: none;
+   color: #827D7C;
 }
 
 img {
@@ -186,19 +187,6 @@ Page: About
   background-image: url('../img/mail.png');
 }
 
-table {
-  color: #333;
-  font-family: sans-serif;
-  font-size: .9em;
-  font-weight: 300;
-  text-align: center;
-  line-height: 40px;
-  border-spacing: 0;
-  border: 1px solid #ddd;
-  max-width: 940px;
-  margin: auto;
-    padding: 5px;
-}
 
 .inner_button > input {
   margin-left: auto;
